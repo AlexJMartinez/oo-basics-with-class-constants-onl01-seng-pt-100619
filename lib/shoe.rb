@@ -1,6 +1,6 @@
 class Shoe
-  attr_accessor :color, :size, :material, :condition
-  attr_reader :brand
+  attr_accessor :color, :material, :condition
+  attr_reader :brand, :size
 
   BRANDS = []
 
@@ -8,6 +8,8 @@ class Shoe
     @brand = brand
     BRANDS << brand
   end
+  def size=(size)
+    @size = size
 
   def cobble
     self.condition = "new"
